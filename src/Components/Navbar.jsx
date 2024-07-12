@@ -19,7 +19,7 @@ const Navbar = () => {
             INWOOD
           </Link>
         </div>
-        <div className="flex justify-center items-center text-xs md:text-md gap-5 md:gap-10 text-CustomColor">
+        <div className="flex justify-center items-center text-xs md:text-lg gap-5 md:gap-10 text-CustomColor">
           <Link to="/" className="button">
             Home
           </Link>
