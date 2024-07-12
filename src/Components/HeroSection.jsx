@@ -8,7 +8,7 @@ const HeroSection = () => {
           style={{ objectFit: "cover", width: "100%", height: "100%" }}
         />
         <div
-          className="absolute px-6 md:px-32 py-5 sm:py-10 md:py-20"
+          className="absolute px-6 md:px-32 py-3 sm:py-10 md:py-20"
           style={{
             position: "absolute",
             top: "0",

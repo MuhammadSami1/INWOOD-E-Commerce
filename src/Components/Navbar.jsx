@@ -29,9 +29,6 @@ const Navbar = () => {
           <Link to="/product" className="button">
             Product
           </Link>
-          <Link to="/checkout" className="button">
-            Check out
-          </Link>
         </div>
         <button
           style={{ width: "1.5rem", height: "1.5rem", position: "relative" }}
