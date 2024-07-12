@@ -9,5 +9,5 @@
   font-style: normal;
 }
 .button {
-  @apply hover:underline hover:text-CustomColor1 hover:font-medium;
+  @apply hover:underline hover:text-CustomColor1 hover:font-semibold;
 }
