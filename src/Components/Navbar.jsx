@@ -1,6 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const dropDown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="bg-zinc-400 bg-opacity-80">
       <div className="flex justify-between items-center px-5 py-2 mx-auto max-w-6xl">
@@ -19,7 +26,7 @@ const Navbar = () => {
             INWOOD
           </Link>
         </div>
-        <div className="flex justify-center items-center text-xs md:text-lg gap-2 md:gap-8 text-CustomColor1 tracking-tight">
+        <div className="hidden md:flex justify-center items-center text-xs md:text-lg gap-2 md:gap-8 text-CustomColor1 tracking-tight">
           <Link to="/" className="button">
             Home
           </Link>
@@ -29,10 +36,13 @@ const Navbar = () => {
           <Link to="/product" className="button">
             Product
           </Link>
+          <Link to="/checkout" className="button">
+            Check Out
+          </Link>
         </div>
         <button
           style={{ width: "1.5rem", height: "1.5rem", position: "relative" }}
-          className="rounded-full"
+          className="hidden md:flex rounded-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +66,50 @@ const Navbar = () => {
             1
           </div>
         </button>
+        <button
+          type="button"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          onClick={dropDown}
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
       </div>
+      {isOpen && (
+        <div className="md:hidden">
+          <div className="flex flex-col items-center gap-3 pb-4">
+            <Link to="/" className="button">
+              Home
+            </Link>
+            <Link to="/shop" className="button">
+              Shop
+            </Link>
+            <Link to="/product" className="button">
+              Product
+            </Link>
+            <Link to="/checkout" className="button">
+              Check out
+            </Link>
+            <Link to="/cart" className="button">
+              Cart
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

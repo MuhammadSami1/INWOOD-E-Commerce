@@ -8,7 +8,7 @@ import Cart from "./Page/Cart";
 
 function App() {
   return (
-    <>
+    <div className="overflow-auto overflow-y-auto">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
