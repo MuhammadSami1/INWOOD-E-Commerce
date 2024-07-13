@@ -5,13 +5,10 @@ export default {
     extend: {
       colors: {
         CustomColor1: "#08545e",
+        background: "#97c8b9",
       },
     },
   },
-  variants: {
-    extend: {
-      fill: ["hover", "focus"], // Enable fill for hover and focus states if needed
-    },
-  },
+
   plugins: [],
 };

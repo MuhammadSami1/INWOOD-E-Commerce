@@ -5,6 +5,7 @@ import Shop from "./Page/Shop";
 import Product from "./Page/Product";
 import CheckOut from "./Page/CheckOut";
 import Cart from "./Page/Cart";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
