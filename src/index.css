@@ -11,3 +11,6 @@
 .button {
   @apply hover:underline hover:text-CustomColor1 hover:font-semibold;
 }
+.Custom::placeholder {
+  @apply px-4;
+}
