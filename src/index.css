@@ -9,7 +9,7 @@
   font-style: normal;
 }
 .button {
-  @apply hover:underline hover:text-CustomColor1 hover:font-semibold;
+  @apply hover:underline text-CustomColor1 hover:font-semibold;
 }
 .Custom::placeholder {
   @apply px-4;

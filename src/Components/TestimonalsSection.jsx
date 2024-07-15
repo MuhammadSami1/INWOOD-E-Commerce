@@ -3,32 +3,32 @@ import TestimonalsCard from "./TestimonalsCard";
 const profiles = [
   {
     id: 1,
-    title: "The best restaurant",
+    title: "Top-Rated Electronics",
     profile:
       "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
     name: "John Doe",
     message:
-      "Last night, we dined at place and were simply blown away. From the moment we stepped in, we were enveloped in an inviting atmosphere and greeted with warm smiles.",
+      "I recently purchased a laptop from this site, and I couldn't be happier. The user-friendly interface made shopping a breeze, and the delivery was prompt. Highly recommended!",
     address: "Los Angeles, CA",
   },
   {
     id: 2,
-    title: "Simply delicious",
+    title: "Exceptional Home Goods",
     profile:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     name: "Andy Smith",
     message:
-      "Place exceeded my expectations on all fronts. The amibance was cozy and relaxed, making it a perfect venue for our anniversary dinner. Each dish was prepared and beautifully presented.",
+      "This website exceeded my expectations on all fronts. The selection of home goods was vast, and I found exactly what I needed. The items arrived in perfect condition.",
     address: "San Diego, CA",
   },
   {
     id: 3,
-    title: "One of a kind restaurant",
+    title: "Unique Fashion Finds",
     profile:
       "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
-    name: "Sophire Robson",
+    name: "Sophia Robson",
     message:
-      "The culinary experience at place is first to none. The atmosphere is vibrant, the food was the highlight of our evening Highly recommended.The service was impeccable.",
+      "Shopping for fashion on this site was an incredible experience. The variety and quality of clothes are unmatched. I found some unique pieces that have become staples in my wardrobe.",
     address: "San Francisco, CA",
   },
 ];

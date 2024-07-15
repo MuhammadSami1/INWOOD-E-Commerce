@@ -1,3 +1,4 @@
+import FeaturedSection from "../Components/FeaturedSection";
 import HeroSection from "../Components/HeroSection";
 import NewsLetter from "../Components/NewsLetter";
 import PopularProducts from "../Components/PopularProducts";
@@ -8,6 +9,7 @@ const Home = () => {
     <>
       <HeroSection />
       <PopularProducts />
+      <FeaturedSection />
       <TestimonalsSection />
       <NewsLetter />
     </>

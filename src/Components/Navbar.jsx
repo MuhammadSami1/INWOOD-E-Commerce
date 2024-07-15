@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ openCart }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const dropDown = () => {
@@ -33,9 +33,7 @@ const Navbar = () => {
           <Link to="/shop" className="button">
             Shop
           </Link>
-          <Link to="/product" className="button">
-            Product
-          </Link>
+
           <Link to="/checkout" className="button">
             Check Out
           </Link>
@@ -43,6 +41,7 @@ const Navbar = () => {
         <button
           style={{ width: "1.5rem", height: "1.5rem", position: "relative" }}
           className="hidden md:flex rounded-full"
+          onClick={openCart}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -98,15 +97,13 @@ const Navbar = () => {
             <Link to="/shop" className="button">
               Shop
             </Link>
-            <Link to="/product" className="button">
-              Product
-            </Link>
+
             <Link to="/checkout" className="button">
               Check out
             </Link>
-            <Link to="/cart" className="button">
+            <button onClick={openCart} className="button">
               Cart
-            </Link>
+            </button>
           </div>
         </div>
       )}
