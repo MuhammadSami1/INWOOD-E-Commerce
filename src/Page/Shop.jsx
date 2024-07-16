@@ -31,7 +31,7 @@ const Shop = () => {
       <div className="text-center text-CustomColor1 text-2xl sm:text-4xl libre-baskerville-regular">
         Explore by Category
       </div>
-      <div className="max-w-6xl mx-auto grid grid-cols-3 md:grid-cols-4 gap-x-10 py-16">
+      <div className="max-w-6xl mx-auto grid grid-cols-3 md:grid-cols-4 gap-x-5 sm:gap-x-10 py-16">
         <div className="col-span-1 flex flex-col items-start gap-y-10 pt-16 px-3 sm:px-7 text-xs sm:text-lg text-CustomColor1">
           <button className="CustomHover">Bedroom</button>
           <button className="CustomHover">Dinning Room</button>
