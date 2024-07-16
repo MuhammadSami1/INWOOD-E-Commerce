@@ -50,7 +50,7 @@ const Shop = () => {
               <img
                 src={item.img}
                 alt="bedroom"
-                className="rounded-lg pr-7 sm:px-0 w-[385px] sm:w-[230px] md:w-[385px] h-[170px] sm:h-[150px] md:h-[200px] hover:scale-105 duration-150 transition-transform transform"
+                className="rounded-lg sm:pr-7 sm:px-0 w-[230px] sm:w-[230px] md:w-[385px] h-[170px] sm:h-[150px] md:h-[200px] hover:scale-105 duration-150 transition-transform transform"
                 style={{ objectFit: "cover" }}
               />
             </div>
