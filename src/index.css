@@ -14,3 +14,6 @@
 .Custom::placeholder {
   @apply px-4;
 }
+.CustomHover {
+  @apply hover:scale-105 duration-300 transition-transform transform;
+}
