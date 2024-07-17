@@ -7,6 +7,8 @@ import CheckOut from "./Page/CheckOut";
 import Cart from "./Page/Cart";
 import Footer from "./Components/Footer";
 import { useState } from "react";
+import Contact from "./Page/Contact";
+import Product from "./Page/Product";
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -23,6 +25,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
       <Footer />
       {isCartOpen && <Cart closeCart={closeCart} />}

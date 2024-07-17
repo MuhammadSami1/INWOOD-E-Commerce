@@ -17,3 +17,8 @@
 .CustomHover {
   @apply hover:scale-105 duration-300 transition-transform transform;
 }
+
+.custom-placeholder::placeholder {
+  color: gray;
+  padding-left: 20px;
+}

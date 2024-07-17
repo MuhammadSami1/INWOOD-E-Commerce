@@ -9,7 +9,7 @@ const Navbar = ({ openCart }) => {
   };
 
   return (
-    <nav className="bg-zinc-400 bg-opacity-80">
+    <nav className="bg-zinc-400 bg-opacity-80 py-2">
       <div className="flex justify-between items-center px-5 py-2 mx-auto max-w-6xl">
         <div className="flex justify-center items-center">
           <Link to="/">
@@ -33,7 +33,9 @@ const Navbar = ({ openCart }) => {
           <Link to="/shop" className="button">
             Shop
           </Link>
-
+          <Link to="/contact" className="button">
+            Contact
+          </Link>
           <Link to="/checkout" className="button">
             Check Out
           </Link>
@@ -97,7 +99,9 @@ const Navbar = ({ openCart }) => {
             <Link to="/shop" className="button">
               Shop
             </Link>
-
+            <Link to="/contact" className="button">
+              Contact
+            </Link>
             <Link to="/checkout" className="button">
               Check out
             </Link>
