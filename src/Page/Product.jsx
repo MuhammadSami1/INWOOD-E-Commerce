@@ -1,16 +1,33 @@
-const Product = () => {
+import { useSelector } from "react-redux";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+
+const Product = ({ id, setShowProduct }) => {
+  const allUsers = useSelector((state) => state.app.users);
+
+  const singleProduct = allUsers.filter((e) => e.id === id);
   return (
-    <section className="text-gray-600 body-font overflow-hidden">
+    <section className="text-gray-600 bg-zinc-200 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
+        <div className="md:px-36 pb-20 flex justify-end h-7">
+          <button
+            type="button"
+            className="relative -m-2 p-2 text-gray-400 hover:text-gray-500"
+            onClick={() => setShowProduct(false)}
+          >
+            <span className="absolute -inset-0.5" />
+            <span className="sr-only">Close panel</span>
+            <XMarkIcon aria-hidden="true" className="h-10 w-10" />
+          </button>
+        </div>
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <img
             alt="ecommerce"
             className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-            src="https://dummyimage.com/400x400"
+            src={singleProduct[0].image}
           />
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
             <h1 className="text-CustomColor1 text-3xl title-font font-medium mb-1">
-              The Catcher in the Rye
+              {singleProduct[0].name}
             </h1>
             <div className="flex mb-4">
               <span className="flex items-center">
@@ -110,14 +127,7 @@ const Product = () => {
                 </a>
               </span>
             </div>
-            <p className="leading-relaxed">
-              Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-              sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-              juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-              seitan poutine tumeric. Gastropub blue bottle austin listicle
-              pour-over, neutra jean shorts keytar banjo tattooed umami
-              cardigan.
-            </p>
+            <p className="leading-relaxed">{singleProduct[0].description}</p>
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
               <div className="flex">
                 <span className="mr-3">Color</span>
@@ -152,7 +162,7 @@ const Product = () => {
             </div>
             <div className="flex">
               <span className="title-font font-medium text-2xl text-gray-900">
-                $58.00
+                ${singleProduct[0].price}
               </span>
               <button className="flex ml-auto text-white bg-CustomColor1 border-0 py-2 px-2 sm:px-6 focus:outline-none hover:bg-opacity-70 rounded-md">
                 Add to Cart
