@@ -22,7 +22,14 @@ const userDetails = createSlice({
     loading: false,
     users: [],
     error: null,
+    cart: [],
   },
+  reducers: {
+    addToCart: (state, action) => {
+      state.cart = state.cart.concat(action.payload);
+    },
+  },
+
   //   For showUsers
   extraReducers: (builder) => {
     builder
@@ -41,3 +48,4 @@ const userDetails = createSlice({
 });
 
 export default userDetails.reducer;
+export const { addToCart } = userDetails.actions;

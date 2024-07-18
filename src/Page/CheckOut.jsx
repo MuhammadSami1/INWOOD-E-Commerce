@@ -1,6 +1,6 @@
 const CheckOut = () => {
   return (
-    <section className="py-20">
+    <section className="py-20 bg-zinc-200 bg-opacity-70">
       <div className="max-w-6xl mx-auto rounded-lg">
         <h1 className="text-2xl sm:text-4xl font-bold pb-10 text-center text-CustomColor1 libre-baskerville-regular">
           Checkout
@@ -213,7 +213,7 @@ const CheckOut = () => {
             <h2 className="text-xl font-semibold pb-4 text-CustomColor1">
               Order Summary
             </h2>
-            <div className="bg-gray-100 p-4 rounded">
+            <div className="bg-gray-300 p-4 rounded">
               <p className="text-gray-700">
                 <strong>Item 1</strong>: $10.00
               </p>
