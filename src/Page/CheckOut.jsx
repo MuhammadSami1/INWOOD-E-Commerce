@@ -1,4 +1,13 @@
+import { useSelector } from "react-redux";
+
 const CheckOut = () => {
+  const { cart } = useSelector((state) => state.app) || { cart: [] };
+
+  const subtotal = cart.reduce(
+    (total, item) => total + (item.price * item.quantity || 0),
+    0
+  );
+
   return (
     <section className="py-20 bg-zinc-200 bg-opacity-70">
       <div className="max-w-6xl mx-auto rounded-lg">
@@ -214,22 +223,18 @@ const CheckOut = () => {
               Order Summary
             </h2>
             <div className="bg-gray-300 p-4 rounded">
-              <p className="text-gray-700">
-                <strong>Item 1</strong>: $10.00
-              </p>
-              <p className="text-gray-700">
-                <strong>Item 2</strong>: $15.00
-              </p>
-              <p className="text-gray-700">
-                <strong>Item 3</strong>: $20.00
-              </p>
+              {cart.map((item) => (
+                <p key={item.id} className="text-gray-700">
+                  <strong>{item.name}</strong>: ${item.price.toFixed(2)} x{" "}
+                  {item.quantity} = ${(item.price * item.quantity).toFixed(2)}
+                </p>
+              ))}
               <hr className="my-2" />
               <p className="text-gray-700 text-lg">
-                <strong>Total</strong>: $45.00
+                <strong>Total</strong>: ${subtotal.toFixed(2)}
               </p>
             </div>
           </section>
-
           {/* Submit Button  */}
           <div className="text-right pt-5">
             <button

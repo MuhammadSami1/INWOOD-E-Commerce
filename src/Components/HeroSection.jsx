@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="bg-zinc-400 bg-opacity-80">
       <div style={{ position: "relative", width: "100%", height: "100%" }}>
@@ -27,7 +30,10 @@ const HeroSection = () => {
           <p className="text-CustomColor1 text-xs sm:text-md py-1 sm:py-3 md:py-10">
             Explore different categories. Find the best deals.
           </p>
-          <button className="text-white text-xs sm:text-md bg-CustomColor1 bg-opacity-50 rounded-lg px-2 sm:px-5 md:px-9 py-1 sm:py-2 md:py-4 hover:scale-105 duration-300 transition-transform transform">
+          <button
+            className="text-white text-xs sm:text-md bg-CustomColor1 bg-opacity-50 rounded-lg px-2 sm:px-5 md:px-9 py-1 sm:py-2 md:py-4 hover:scale-105 duration-300 transition-transform transform"
+            onClick={() => navigate("/shop")}
+          >
             Shop Now
           </button>
         </div>

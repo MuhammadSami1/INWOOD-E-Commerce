@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-// import { useEffect, useState } from "react";
+
 import { addToCart } from "../features/userDetailSlice";
 
 const Product = ({ id, setShowProduct }) => {
@@ -9,15 +9,12 @@ const Product = ({ id, setShowProduct }) => {
 
   const singleProduct = allUsers.filter((e) => e.id === id);
 
-  // const [productId, setProductId] = useState([]);
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
     dispatch(addToCart(singleProduct));
   };
-  // useEffect(() => {
-  //   dispatch(Cartdata(productId));
-  // }, [productId]);
+
   return (
     <section className="text-gray-600 bg-zinc-200 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">

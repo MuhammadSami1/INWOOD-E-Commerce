@@ -18,7 +18,7 @@ const Shop = () => {
     dispatch(showUsers());
     if (loading) {
       return (
-        <h2 className="text-5xl text-CustomColor1 font-bold text-center my-5">
+        <h2 className="text-5xl bg-CustomColor1 font-bold text-center my-5">
           Loading...
         </h2>
       );
@@ -38,7 +38,7 @@ const Shop = () => {
     }
     if (loading) {
       return (
-        <h2 className="text-5xl text-CustomColor1 font-bold text-center my-5">
+        <h2 className="text-5xl bg-CustomColor1 font-bold text-center my-5">
           Loading...
         </h2>
       );

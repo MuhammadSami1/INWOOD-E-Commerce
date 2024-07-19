@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 const products = [
   {
     id: 1,
@@ -38,6 +40,7 @@ const products = [
 ];
 
 const PopularProducts = () => {
+  const navigate = useNavigate();
   return (
     <section className="bg-zinc-200 bg-opacity-80">
       <div className="py-16">
@@ -70,7 +73,10 @@ const PopularProducts = () => {
           ))}
         </div>
         <div className="flex justify-center items-center pt-16">
-          <button className="text-white text-xs sm:text-md bg-CustomColor1 bg-opacity-50 rounded-lg px-5 md:px-7 py-4 hover:scale-105 duration-300 transition-transform transform">
+          <button
+            className="text-white text-xs sm:text-md bg-CustomColor1 bg-opacity-50 rounded-lg px-5 md:px-7 py-4 hover:scale-105 duration-300 transition-transform transform"
+            onClick={() => navigate("/shop")}
+          >
             Explore all items
           </button>
         </div>

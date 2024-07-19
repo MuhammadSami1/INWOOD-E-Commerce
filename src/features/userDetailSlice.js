@@ -28,6 +28,17 @@ const userDetails = createSlice({
     addToCart: (state, action) => {
       state.cart = state.cart.concat(action.payload);
     },
+    increaseQuantity: (state, action) => {
+      const item = state.cart.find((item) => item.id === action.payload);
+      if (item) item.quantity += 1;
+    },
+    decreaseQuantity: (state, action) => {
+      const item = state.cart.find((item) => item.id === action.payload);
+      if (item) item.quantity = Math.max(item.quantity - 1, 1);
+    },
+    removeItem: (state, action) => {
+      state.cart = state.cart.filter((item) => item.id !== action.payload);
+    },
   },
 
   //   For showUsers
@@ -48,4 +59,5 @@ const userDetails = createSlice({
 });
 
 export default userDetails.reducer;
-export const { addToCart } = userDetails.actions;
+export const { addToCart, increaseQuantity, decreaseQuantity, removeItem } =
+  userDetails.actions;
