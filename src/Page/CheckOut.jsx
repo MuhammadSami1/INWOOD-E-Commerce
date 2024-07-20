@@ -10,7 +10,7 @@ const CheckOut = () => {
 
   return (
     <section className="py-20 bg-zinc-200 bg-opacity-70">
-      <div className="max-w-6xl mx-auto rounded-lg">
+      <div className="max-w-6xl mx-auto rounded-lg px-5">
         <h1 className="text-2xl sm:text-4xl font-bold pb-10 text-center text-CustomColor1 libre-baskerville-regular">
           Checkout
         </h1>

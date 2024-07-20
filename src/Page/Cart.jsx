@@ -60,7 +60,7 @@ const Cart = ({ closeCart }) => {
                     <DialogTitle className="text-lg font-medium text-CustomColor1">
                       Shopping cart
                     </DialogTitle>
-                    <div className="ml-3 flex h-7 items-center">
+                    <div className="ml-3 hidden md:flex h-7 items-center">
                       <button
                         type="button"
                         onClick={closeCart}
