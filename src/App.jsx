@@ -18,7 +18,7 @@ function App() {
     setIsCartOpen(false);
   }
   return (
-    <div className="overflow-auto overflow-y-auto">
+    <>
       <Navbar openCart={openCart} />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,7 +28,7 @@ function App() {
       </Routes>
       <Footer />
       {isCartOpen && <Cart closeCart={closeCart} />}
-    </div>
+    </>
   );
 }
 

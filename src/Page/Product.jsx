@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { addToCart } from "../features/userDetailSlice";
 
@@ -9,6 +9,7 @@ const Product = ({ id, setShowProduct }) => {
 
   const singleProduct = allUsers.filter((e) => e.id === id);
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
@@ -182,7 +183,10 @@ const Product = ({ id, setShowProduct }) => {
                   >
                     Add to Cart
                   </button>
-                  <button className="bg-gray-300 hover:bg-gray-200 px-2 sm:px-4 py-2 border-0 inline-flex items-center justify-center text-CustomColor1 ml-4">
+                  <button
+                    className="bg-gray-400 hover:bg-opacity-40 px-2 sm:px-4 py-2 border-0 inline-flex items-center justify-center text-CustomColor1 ml-4 duration-300"
+                    onClick={() => navigate("/checkout")}
+                  >
                     Checkout
                   </button>
                 </div>
